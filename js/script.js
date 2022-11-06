@@ -54,6 +54,5 @@ $(document).ready(function () {
 });
 
 setTimeout(function () {
-  // clear the current URL
-  location = ""; // location references the current URL
+  location = "https://miklywek.github.io/work-day-scheduler/";
 }, 1000 * 60);
