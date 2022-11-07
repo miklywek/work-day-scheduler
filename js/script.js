@@ -53,6 +53,8 @@ $(document).ready(function () {
   timeTracker();
 });
 
-setTimeout(function () {
+setInterval(function () {
   location = "https://miklywek.github.io/work-day-scheduler/";
+  console.log(setTimeout);
 }, 1000 * 60);
+console.log(location);
