@@ -39,22 +39,28 @@ $(document).ready(function () {
   }
 
   //   Get item from local storage if any
-  $("#hour8 .description").val(localStorage.getItem("hour8"));
-  $("#hour9 .description").val(localStorage.getItem("hour9"));
-  $("#hour10 .description").val(localStorage.getItem("hour10"));
-  $("#hour11 .description").val(localStorage.getItem("hour11"));
-  $("#hour12 .description").val(localStorage.getItem("hour12"));
-  $("#hour13 .description").val(localStorage.getItem("hour13"));
-  $("#hour14 .description").val(localStorage.getItem("hour14"));
-  $("#hour15 .description").val(localStorage.getItem("hour15"));
-  $("#hour16 .description").val(localStorage.getItem("hour16"));
-  $("#hour17 .description").val(localStorage.getItem("hour17"));
+  // $("#hour8 .description").val(localStorage.getItem("hour8"));
+  // $("#hour9 .description").val(localStorage.getItem("hour9"));
+  // $("#hour10 .description").val(localStorage.getItem("hour10"));
+  // $("#hour11 .description").val(localStorage.getItem("hour11"));
+  // $("#hour12 .description").val(localStorage.getItem("hour12"));
+  // $("#hour13 .description").val(localStorage.getItem("hour13"));
+  // $("#hour14 .description").val(localStorage.getItem("hour14"));
+  // $("#hour15 .description").val(localStorage.getItem("hour15"));
+  // $("#hour16 .description").val(localStorage.getItem("hour16"));
+  // $("#hour17 .description").val(localStorage.getItem("hour17"));
+  $(".time-block").each(function (index, element) {
+    const id = $(element).attr("id");
+    console.log(localStorage.getItem(id));
+    $(element)
+      .find(".description")
+      .val(localStorage.getItem(id) || "");
+    //   $(".description").attr(id).val(localStorage.getItem(id) || "");
+  });
 
   timeTracker();
 });
 
-setInterval(function () {
-  location = "https://miklywek.github.io/work-day-scheduler/";
-  console.log(setTimeout);
-}, 1000 * 60);
-console.log(location);
+// setInterval(function () {
+//   location.reload();
+// }, 1000 * 60);
